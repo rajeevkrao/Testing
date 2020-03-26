@@ -1,0 +1,19 @@
+<html>
+	<head></head>
+	<body>
+		<button onclick="myf()">Abc</button>
+		<script>
+		function myf()
+		{
+			Notification.requestPermission().then(function(result) {
+  				console.log(result);
+			});	
+		}
+		/*
+Notification.requestPermission().then(function(result) {
+  console.log(result);
+});*/
+		console.log(Notification.permission)
+		</script>
+	</body>
+</html>
