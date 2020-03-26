@@ -16,6 +16,7 @@ const dreams = [
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
+app.use(express.static("myDir"));
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
