@@ -15,7 +15,8 @@
     "got": "^10.7.0",
     "cheerio": "^0.22.0",
     "node-html-parser": "^1.2.13",
-    "instagram-scraping": "^1.0.12"
+    "instagram-scraping": "^1.0.12",
+    "node-telegram-bot-api": "^0.30.0"
   },
   "engines": {
     "node": "12.x"
