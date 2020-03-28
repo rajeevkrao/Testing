@@ -6,11 +6,18 @@
 const express = require("express");
 const app = express();
 const TelegramBot = require('node-telegram-bot-api');
+var ig = require('instagram-scraping');
 
 const token = process.env.TG_TOKEN;
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
+
+setInterval(() => {
+  ig.scrapeUserPage('ashishchanchlani').then(result => {
+    console.dir(result.medias[0]['shortcode']);
+  });
+}, 5000)
 
 // Matches "/echo [whatever]"
 //sends the arguments of echo when sent /echo [message]
