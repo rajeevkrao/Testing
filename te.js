@@ -1,15 +1,5 @@
-const { parse } = require('node-html-parser');
-const got = require('got');
+var ig = require('instagram-scraping');
 
-const vgmUrl= 'https://www.instagram.com/ashishchanchlani/';
-
-got(vgmUrl).then(response => {
-  parser(response.body);
-}).catch(err => {
-  console.log(err);
+ig.scrapeUserPage('ashishchanchlani').then(result => {
+  console.dir(result.medias[0]['shortcode']);
 });
-
-function parser(html){
-  var data = parse(html);
-  console.log(data.querySelector('a'));
-}
