@@ -11,5 +11,5 @@ got(vgmUrl).then(response => {
 
 function parser(html){
   var data = parse(html);
-  console.log(data);
+  console.log(data.querySelector('a'));
 }
