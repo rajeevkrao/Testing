@@ -15,14 +15,7 @@ const token = process.env.TG_TOKEN;
 const bot = new TelegramBot(token, {polling: true});
 
 setInterval(() => {
-  ig.scrapeUserPage('ashishchanchlani').then(result => {
-    var links = JSON.parse(fs.readFileSync('./ig.json','utf8'))
-    if(result.medias[0]['shortcode']==links.latestPost)
-      return;
-    else{
-      links.latestPost=result.medias[0]['shortcode']
-    }
-  });
+
 }, 5000)
 
 // Matches "/echo [whatever]"
